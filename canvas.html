@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas width="5000" height="5000" id="q" onclick="f()"></canvas>
+<script type="text/javascript">
+/*	for(j=0;j<10;j++){
+	 	for(i=0;i<10;i++){
+			ctx.fillRect(110*i,10+120*j,50,50);
+	 	}
+	 	for(i=0;i<10;i++){
+	 		ctx.fillRect(55+110*i,10+55+120*j,50,50)
+	 	}
+	}*/
+	var ctx = document.getElementById("q").getContext("2d");	
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.arc(95, 50, 30, 0, 2 * Math.PI);
+ctx.arc(95, 50, 20, 0, 2 * Math.PI);
+ctx.arc(95, 50, 10, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.font = "30px Arial";
+ctx.fillText("попади в меня", 10, 130);
+ctx.moveTo(5, 5);
+ctx.lineTo(5, 150);
+ctx.moveTo(5, 150);
+ctx.lineTo(225, 150);
+ctx.moveTo(225, 150);
+ctx.lineTo(225, 5);
+ctx.moveTo(225, 5);
+ctx.lineTo(5, 5);
+ctx.stroke();
+</script>
+</body>
+</html>

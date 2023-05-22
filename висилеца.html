@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>!висилица!</title>
+</head>
+<body>
+	      <link rel="icon" type="image/x-icon" href="логотип.ico">
+  <input type="button" name="" onclick="rty('menushko.html')" value="<=">
+<script type="text/javascript">
+function rty(s) {
+			document.location.href=s;
+		}
+var name = prompt("Как вас зовут?");
+alert("Привет, " + name);
+/*var likesCats = confirm("Тебе нравятся кошки?");
+if (likesCats) {
+ alert("круто мне тоже!");
+} else {
+ alert("Что ж, не проблема. Все равно ты молодец!");
+}*/
+var words = [
+ "ИванГрозный",
+ "шаурма",
+ "овечка",
+ "собака",
+ "турник",
+ "брусья",
+ "Пётр1",
+ "Жуков",
+ "смута"
+];
+var words2 = [
+ "значимая личность в истории России, (16 век) ",
+ "эту еду придумал мигрант из турции ",
+ "пушистое домашнее животное ",
+ "пушистое домашнее животное",
+ "один из видов тринажёров,(но можно и трюки выпонять) ",
+  "один из видов тринажёров,(но можно и трюки выпонять) ",
+ "Кто открыл окно в европу? ",
+ "кто говорил: война есть, на ней не может не быть потерь и что эти потери могут быть крупными, особено когда мы имеем дело с таким серьёзным и ожесточённым врагом ",
+ "трудные времена в России с 1598 года по 1613 год "
+];
+var n=Math.floor(Math.random() * words.length);
+var word = words[n];
+var word2 = words2[n];
+var answerArray = [];
+alert(words2[n] + name + " воспользуйтесь этой подсказкой она вам поможет ")
+/*const start = Date.now();//
+console.log('starting timer...');*/
+for (var i = 0; i < word.length; i++) {
+ answerArray[i] = "_";
+}
+var remainingLetters = word.length;
+while (remainingLetters > 0) {
+		alert(answerArray.join(" "));
+		var guess = prompt("Угадайте букву или нажмите Отмена для выходаиз игры.");
+		if (guess === null) {
+ 	break;
+ 	} else if (guess.length !== 1) {
+ 		alert("Пожалуйста, введите только одну букву. ");
+	} 	
+	else {
+	}
+		for (var j = 0; j < word.length; j++) {
+ 	if (word[j] === guess) {
+ 		answerArray[j] = guess;
+		 remainingLetters--;
+	 }
+	}
+}
+alert(answerArray.join(" "));
+alert("Отлично " + name + "! Было загадано слово " + word);
+/*setTimeout(() => {//
+  const millis = Date.now() - start;//
+  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+}, 2000);*/
+</script>
+</body>
+</html>

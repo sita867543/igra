@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>снежки</title>
+</head>
+   <body onload="f()"> 
+   	<div id="q1" style="position: absolute">
+		<img src="снежинка.png">
+ 	</div>
+   	<div id="q2" style="position: absolute">	
+		<img src="снежинка.png">
+ 	</div>
+   	<div id="q3" style="position: absolute">
+		<img src="снежинка.png">
+ 	</div>
+   	<div id="q4" style="position: absolute">
+		<img src="снежинка.png">
+ 	</div>
+   	<div id="q0" style="position: absolute">
+		<img src="снежинка.png">
+ 	</div>
+	<script type="text/javascript">
+var y=[],x=[],a=[],p=[],d=[],v=[];
+
+		for (var i = 0; i <5; i++) {
+			y[i]=0;
+			a[i]=Math.round(Math.random()*70)+50;
+			p[i]=Math.round(Math.random()*90)+45;
+			d[i]=Math.round(Math.random()*1000)+0;
+			v[i]=Math.round(Math.random()*2)+1;
+			//alert(a[i]);
+		}
+	function f(){
+		for (var i = 0; i <5; i++) {
+			y[i]=y[i]+v[i];
+			document.getElementById("q"+i).style.top=y[i]+"px";
+			x[i]=a[i]*Math.sin(y[i]/p[i])+d[i];
+			document.getElementById("q"+i).style.left=x[i]+"px";
+			if(y[i]>600){
+				y[i]=1;
+				d[i]=Math.round(Math.random()*1000)+0;
+			}
+			//alert(a[i]);
+		}
+	
+		setTimeout("f()",10);
+	}
+
+	</script>
+   </body>
+   </html>

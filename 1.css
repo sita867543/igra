@@ -1,0 +1,64 @@
+header{
+height:100% ;
+width:5px ;
+}
+
+h2{
+  color: red;
+  font-size: 27px;
+  font-family:Bradley Hand, cursive;
+
+}
+h2:hover{
+  color: blue;
+  font-size: 26px;
+  font-family:Bradley Hand, cursive;
+
+}
+h1{ font-family:Bradley Hand, cursive;}
+li{ font-family:Bradley Hand, cursive;}
+div.q1{
+  border-radius: 5px;
+
+}
+    .q1 {border-radius: 30px;
+        border-color: black;
+    border-style: solid; 
+    padding: 1px;
+    transition: 0.65s;
+      }
+    .q1:hover{
+          padding: 3px;
+    border-color: green;
+
+    }
+    .r1{
+      border-radius: 30px;
+    }
+    h3{
+      font-family:Bradley Hand, cursive;
+      color: rgba(0,0,0,0.3) 
+
+    }
+    .podval{
+    height: 300px;
+    width: 1370px;
+    background: rgb(1 1 70);
+    }
+    footer{
+          background: rgb(1 1 70);
+          height: 100px;
+    }
+  h4{
+    color: rgba(0,0,0,0.3)
+  font-size: 26px;
+  font-family:Bradley Hand, cursive;
+
+  }
+.rty{
+  border-radius: 5px;
+  width: 100px;
+  background-color: rgb(158,234,11);
+}
+
+

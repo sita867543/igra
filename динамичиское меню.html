@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>menu</title>
+  <script type="text/javascript">
+    n=1;
+    b=1;
+    a=1;
+    function f1() {
+      n=n+1;
+
+      if(n%2==0){
+        document.getElementById('q3').style.visibility="hidden";
+      }
+      else if(n%2>0 || n%2<0){
+        document.getElementById('q3').style.visibility="visible";
+        document.getElementById('q4').style.visibility="hidden";
+        document.getElementById('q6').style.visibility="hidden";
+      }
+    }
+    function f2() {
+      b=b+1;
+      if(b%2==0){
+        document.getElementById('q4').style.visibility="hidden";
+      }
+      else if(b%2>0 || b%2<0){
+        document.getElementById('q4').style.visibility="visible";
+        document.getElementById('q6').style.visibility="hidden";
+        document.getElementById('q3').style.visibility="hidden";
+      }
+    }
+        function f3() {
+      a=a+1;
+      if(a%2==0){
+        document.getElementById('q6').style.visibility="hidden";
+      }
+      else if(a%2>0 || a%2<0){
+        document.getElementById('q6').style.visibility="visible";
+        document.getElementById('q4').style.visibility="hidden";
+        document.getElementById('q3').style.visibility="hidden";
+      }
+    }
+
+  </script>
+  <div id="q1" style="position:absolute; left:100px; top:100px; background-color: grey; visibility: visible; " onclick="f1()">Кино
+  </div>
+    <div id="q2" style="position:absolute; left:200px; top:100px;background-color: grey; visibility: visible;" onclick="f2()">музыка
+  </div>
+    <div id="q3" style="position:absolute; left:65px; top:200px;background-color: orange; visibility: hidden;">боевик,<br>драмма,<br>рамантика,<br>фантастика,<br>документальный.
+  </div>
+    <div id="q4" style="position:absolute; left:200px; top:200px;background-color: orange; visibility: hidden;">рэп,<br>русский шансон,<br>европейский шансон,<br>рок,<br>поп-музыка,<br>электро музыка.
+  </div>
+      <div id="q5" style="position:absolute; left:300px; top:100px;background-color: grey; visibility: visible;" onclick="f3()">природа
+  </div>
+      <div id="q6" style="position:absolute; left:300px; top:200px;visibility: hidden;" ><img src="природа.png" width="50%" >
+
+  </div>
+</head>
+</html>

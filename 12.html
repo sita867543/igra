@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+		function g() {
+			var a,b,c;
+			a=document.getElementById('q').value;
+			c=document.getElementById('w').value;
+			b=c*a;
+			document.getElementById('e').value=b;
+		}*/
+
+		function f() {
+			if(n<10){
+				n+=1;
+				c=document.getElementById("q").value;
+	 			if(a*b==c){
+	 				m+=1;
+					document.getElementById("z").innerHTML="правильно"+m;
+	 			}else{
+					document.getElementById("z").innerHTML="неправильно";
+	 			}
+				a=Math.round(Math.random()*10);
+				b=Math.round(Math.random()*10);
+	 			document.getElementById("a").innerHTML=a+"*"+b+"=";
+	 		}
+	 		else{
+	 			document.getElementById("z").innerHTML="молодец вот ваше количиство балов"+m;
+	 			if(m>8){
+	 				document.getElementById("x").innerHTML="5";
+	 			}
+	 			else if (m>6){
+	 				document.getElementById("x").innerHTML="4";
+	 			}
+	 			else if (m>4){
+	 				document.getElementById("x").innerHTML="3";
+	 			}
+	 			else{
+	 				document.getElementById("x").innerHTML="2";
+	 			}
+
+	 		}
+
+		}
+	</script>
+</head>
+<body>
+	<div id="a"></div>
+	<input type="text" id="q">
+	<input type="button" onclick="f()">
+	<div id="z"></div>
+		<div id="x"></div>
+	<script type="text/javascript">
+			var m=0;
+			var n=0;
+			a=Math.round(Math.random()*10);
+			b=Math.round(Math.random()*10);
+ 			document.getElementById("a").innerHTML=a+"*"+b+"=";
+	</script>
+</body>
+</html>

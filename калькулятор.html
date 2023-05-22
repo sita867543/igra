@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>калькулятор</title>
+	<style type="text/css"> 
+		body{ background-color: black;
+		}
+		.rty{
+  border-radius: 5px;
+  background-color: rgb(158,234,11);
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+		.rtyu{
+			  border-radius: 5px;
+  background-color: rgb(197,253,0);
+  font-family: Impact, fantasy;
+		}
+	</style>
+	<script type="text/javascript">
+			function f(x) {
+				document.getElementById('q').value+=x;
+			}
+				function s() {
+			document.getElementById('q').value="";
+		}
+		function ravno(){
+			document.getElementById("q").value=eval(document.getElementById("q").value);
+		}
+	</script>
+</head>
+   <body> 
+<input type="text" name="" id="q" class="rtyu">
+<div id="content">
+
+<input type="button" name="" value="1" onclick="f(1)" class="rty">
+<input type="button" name="" value="2" onclick="f(2)" class="rty">
+<input type="button" name="" value="3" onclick="f(3)" class="rty">
+<input type="button" name="" value="4" onclick="f(4)" class="rty">
+<input type="button" name="" value="." onclick="f('.')" class="rty">
+<input type="button" name="" value="del" onclick="s()" class="rty">
+</div><div id="content">
+<input type="button" name="" value="5" onclick="f(5)" class="rty">
+<input type="button" name="" value="6" onclick="f(6)" class="rty">
+<input type="button" name="" value="7" onclick="f(7)" class="rty">
+<input type="button" name="" value="8" onclick="f(8)" class="rty">
+<input type="button" name="" value="/" onclick="f('/')" class="rty">
+</div><div id="content">
+<input type="button" name="" value="9" onclick="f(9)" class="rty">
+<input type="button" name="" value="0" onclick="f(0)" class="rty">
+<input type="button" name="" value="+" onclick="f('+')" class="rty">
+<input type="button" name="" value="-" onclick="f('-')" class="rty">
+<input type="button" name="" value="*" onclick="f('*')" class="rty">
+<input type="button" name="" value="=" onclick="ravno()" class="rty">
+
+</div>
+</body>
+</html>

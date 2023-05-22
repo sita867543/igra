@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>змейка</title>
+      <link rel="icon" type="image/x-icon" href="логотип.ico">
+</head>
+<body>
+	<p id="schet"></p>
+    <canvas width="700" height="300" id="q"></canvas>
+    <input type="button" name="" onclick="rty('menushko.html')" value="<=">
+<script type="text/javascript">
+	function rty(s) {
+			document.location.href=s;
+		}
+	
+f=100;//Math.round(Math.random()*600)+50;
+a=100;//Math.round(Math.random()*600)+50;
+x=[11,12,13,14];
+y=[0,0,0,0];
+d=15;
+m=0
+
+var ctx = document.getElementById("q").getContext("2d");
+ctx.fillStyle = "red";
+document.addEventListener("keydown", keyDownHandler, false);
+function keyDownHandler(e) {
+        if(e.keyCode == 39) { x[0]+=d; } 
+        if(e.keyCode == 37) { x[0]-=d; } 
+        if(e.keyCode == 40) { y[0]+=d; } 
+        if(e.keyCode == 38) { y[0]-=d; }
+        //x[0]-=d;
+        if(x[0]>f && x[0]<f+30 && y[0]>a && y[0]<a+20)
+        {
+			f=Math.round(Math.random()*600)+50;
+			a=Math.round(Math.random()*200)+50;
+        	console.log("f=",f);
+         	m++;
+        	document.getElementById('q1').style.top=a+"px";
+        	document.getElementById('q1').style.left=f+"px";
+        	document.getElementById("schet").innerHTML = m;
+        	if(m==10){document.getElementById('q2').style.visibility="visible"}
+    	    if(m>10){document.getElementById('q2').style.visibility="hidden"}
+    	}	
+
+    	
+        console.log(x);
+        if(x[0]<0){x[0]=700;}
+        ctx.clearRect(x[7],y[7],d,d); 
+        for(i=7;i>0;i--){
+            x[i]=x[i-1]
+            y[i]=y[i-1]
+        }
+        ctx.fillRect(x[0],y[0],d,d);
+}
+        //}
+</script>
+  <div id="q1" style="position:absolute; left:100px; top:100px; visibility: visible; " onclick="f1()">
+  	<img src="сгущёнка.png" width="65px" height="40px">
+  </div>
+<div id="q2" style="position:absolute; visibility: hidden; left:150px; top:1px; " onclick="f1()"><h1>ПОБЕДА!!!!!!!!!!!!!</h1>
+  	<img src="победа.png" width="355px" height="355px" >
+  </div>
+</body>
+</html>
